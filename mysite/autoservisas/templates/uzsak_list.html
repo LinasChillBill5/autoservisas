@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Uzsakymu sarasas</h1>
+{% if uzsak_list %}
+<ul>
+  {% for uzsak in uzsak_list %}
+  <li>
+    <a href="{{uzsakymas.id}}">{{ uzsakymas.automobilis_ID }} </a> ({{ uzsakymas.data }})
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+  <p>Servisas uzsakymu neturi.</p>
+{% endif %}
+
+<div class="pagination">
+  <span class="step-links">
+    {% if page_obj.has_previous % }
+      <a href="?page=1">&laqo; pirmas</a>
+      <a href="?page={{ page_obj.previous_page_number }}">atgal</a>
+    {% endif %}
+
+    <span class="current">
+      {{ page_obj.number }} is {{ page_obj.paginator.num_pages }}
+    </span>
+
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">pirmyn</a>
+    <a href="?page={{ page_ogj.paginator.num_pages }}">paskutinis &raqo;</a>
+    {% endif %}
+  </span>
+</div>
+{% endblock %}
+

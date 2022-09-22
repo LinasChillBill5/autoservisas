@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block  content %}
+<h1>Servisiukas</h1>
+<p>!!Kokybiskai ir Nebrangiai!! Dazome kebulus, Tamsinam langus, Montuojam, balansuojam ratus.</p>
+<p>Siuo metu turime tiek:</p>
+    <ul>
+        <li><strong>Dabar turimi uzsakymai: </strong>{{ num_uzsakymai_now }}</li>
+        <li><strong>Dabar suteikiamu paslaugu skaicius: </strong>{{ num_paslaugu }}</li>
+        <li><strong>Jau atliktu paslaugu isviso: </strong>{{ num_uzsakymai_done }}</li>
+        <hr>
+        <li><strong>Uzimtumas : </strong>{{ p_s }}</li>
+        <hr>
+    </ul>
+{% endblock %}

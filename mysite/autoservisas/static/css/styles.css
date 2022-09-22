@@ -1,0 +1,11 @@
+hr {
+    width: 100%;
+    background-color: red;
+    height: 1px;
+    border-color : transparent;
+}
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block  content %}
+
+<h1>Automobiliai</h1>
+<p>{{ autos.all }}</p>
+<p>Automobiliu sarasas:</p>
+{% for a in autos %}
+    <li>
+        <a>{{ a.name }} {{ a.model }}</a>
+    </li>
+
+{% endfor %}
+{% endblock %}
